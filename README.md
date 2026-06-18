@@ -13,31 +13,36 @@ The system is made from two Make.com scenarios that work together:
 
 ## Problem
 
-A business can miss or delay follow-up when enquiries arrive by phone. A caller may not leave enough information for the business to qualify the job, and repeated manual follow-up can be inconsistent.
+A local rendering service was missing enquiries while out on jobs and did not have a reliable way to follow up or keep track of new leads. The business also wanted to spend less time dealing with low-intent enquiries from people who were only price shopping or not ready to buy.
 
-The blueprint shows the automation is designed to handle three practical issues:
+The automation was designed to handle three practical issues:
 
-- Send a follow-up link after a call event.
-- Avoid sending duplicate SMS messages to the same caller within 24 hours.
-- Convert a completed lead form into a clear summary for review.
+- Send a follow-up form automatically after a call event.
+- Add useful friction so leads provide enough detail before taking up the business owner's time.
+- Turn completed form submissions into structured records and clear summaries for review.
 
 ## Solution
 
 The Make.com workflow connects phone-call capture, SMS follow-up, form capture, AI summarisation, and email notification.
 
-The first scenario checks a Make datastore using the caller phone number. If the caller has no recent timestamp, or the timestamp is older than 24 hours, the automation sends an SMS containing a Tally form link and then stores the current timestamp. If the caller is already recorded within the last 24 hours, it skips the SMS.
+The first scenario checks a Make datastore using the caller phone number. If the caller has no recent timestamp, or the timestamp is older than 24 hours, the automation sends an SMS containing a Tally form link and stores the current timestamp. If the caller is already recorded within the last 24 hours, it skips the SMS.
 
-The second scenario starts when the Tally form is submitted. It maps the submitted fields into an OpenAI prompt, generates a concise HTML lead card, and sends that card by email.
+The form is intentionally more detailed than a basic name/email/message form. It is still easy for a serious customer to complete, but it collects enough information to qualify the enquiry before manual follow-up. Tally can also store submissions in Google Sheets, creating a lightweight lead tracker or mini CRM.
+
+The second scenario starts when the Tally form is submitted. It maps the submitted fields into an OpenAI prompt, generates a concise HTML lead card, scores the enquiry, and sends that card by email.
 
 ## Result
 
-The output of the system is a faster, more structured lead-handling process:
+The result was a more structured lead-handling process focused on higher-intent enquiries:
 
-- The caller receives a form link automatically after a qualifying call event.
-- The same caller is not repeatedly texted inside the 24-hour guard window.
-- The business receives a short email summary containing contact details, job details, timing, missing information, and next action.
+- Follow-up changed from a manual 12-24 hour delay to an immediate SMS after a qualifying call event.
+- The 24-hour guard reduced repeated SMS follow-ups to the same caller.
+- The form added enough friction to reduce low-intent enquiries before manual review.
+- Completed submissions became structured lead records and clear email summaries.
+- Completed form submissions represented higher-intent enquiries from people more likely to be ready for a quote or next step.
+- The business no longer needed to chase every caller manually before knowing whether they were a good fit.
 
-This repo does not claim live performance metrics such as conversion rate, response time improvement, or revenue impact. Those would need to be measured separately.
+The next improvement would be to trigger immediate email, SMS, or call alerts for high-intent or emergency-priority leads.
 
 ## Repository Structure
 
