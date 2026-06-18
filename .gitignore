@@ -1,0 +1,13 @@
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs and scratch files
+*.log
+live-*.html
+
+# Local environment files
+.env
+.env.*
