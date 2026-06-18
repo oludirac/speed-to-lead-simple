@@ -57,7 +57,10 @@ The next improvement would be to trigger immediate email, SMS, or call alerts fo
 |   |-- lead-summary-email.blueprint.json
 |   `-- missed-call-to-tally-form.blueprint.json
 |-- screenshots/
-|   `-- .gitkeep
+|   |-- email-lead-summary.png
+|   |-- scenario-01-lead-analysis.png
+|   |-- scenario-02-call-routing.png
+|   `-- sms-response.png
 |-- .gitignore
 |-- README.md
 `-- SECURITY_NOTES.md
@@ -82,14 +85,15 @@ The `screenshots/` folder contains redacted portfolio screenshots of the system.
 
 ### Call To Text Scenario
 
-![Call to text scenario](screenshots/call-to-text-scenario.png)
+![Call to text scenario](screenshots/scenario-02-call-routing.png)
 
 ### Form To AI Summary Scenario
 
-![Form to AI summary scenario](screenshots/form-gpt-email-scenario.png)
+![Form to AI summary scenario](screenshots/scenario-01-lead-analysis.png)
 
 ### Output Examples
 
-| SMS example | Lead summary email example |
-| --- | --- |
-| <img src="screenshots/sms-example.svg" alt="SMS example" width="360"> | <img src="screenshots/email-lead-example.svg" alt="Lead summary email example" width="420"> |
+<p align="center">
+  <img src="screenshots/sms-response.png" width="320" alt="Automated missed-call SMS response" />
+  <img src="screenshots/email-lead-summary.png" width="320" alt="Automated lead summary email" />
+</p>
