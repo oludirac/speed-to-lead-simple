@@ -88,10 +88,8 @@ The `screenshots/` folder contains redacted portfolio screenshots of the system.
 
 ![Form to AI summary scenario](screenshots/form-gpt-email-scenario.png)
 
-### SMS Example
+### Output Examples
 
-<img src="screenshots/sms-example.svg" alt="SMS example" width="520">
-
-### Lead Summary Email Example
-
-<img src="screenshots/email-lead-example.svg" alt="Lead summary email example" width="680">
+| SMS example | Lead summary email example |
+| --- | --- |
+| <img src="screenshots/sms-example.svg" alt="SMS example" width="360"> | <img src="screenshots/email-lead-example.svg" alt="Lead summary email example" width="420"> |
