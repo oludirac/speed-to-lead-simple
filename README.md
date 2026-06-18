@@ -90,8 +90,8 @@ The `screenshots/` folder contains redacted portfolio screenshots of the system.
 
 ### SMS Example
 
-![SMS example](screenshots/text-example.png)
+<img src="screenshots/sms-example.svg" alt="SMS example" width="520">
 
 ### Lead Summary Email Example
 
-![Lead summary email example](screenshots/email-lead-example.png)
+<img src="screenshots/email-lead-example.svg" alt="Lead summary email example" width="680">
